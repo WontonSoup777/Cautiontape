@@ -18,9 +18,28 @@ class HomeFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
         inflater.inflate(R.layout.fragment_home, container, false)
 
+
     companion object {
         fun newInstance(): HomeFragment = HomeFragment()
     }
+
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        about_button.setOnClickListener {
+            val intent = Intent (this@HomeFragment.context, AboutActivity::class.java)
+            startActivity(intent)
+        }
+
+        floatingScoutButton.setOnClickListener {
+            val intent = Intent (this@HomeFragment.context, ScoutActivity::class.java)
+            startActivity(intent)
+        }
+
+    }
+
+
 
 }
 

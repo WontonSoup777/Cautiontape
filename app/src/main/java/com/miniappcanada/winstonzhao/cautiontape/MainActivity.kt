@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_home)
+        setContentView(R.layout.activity_main)
         navigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
         toolbar = supportActionBar!!
