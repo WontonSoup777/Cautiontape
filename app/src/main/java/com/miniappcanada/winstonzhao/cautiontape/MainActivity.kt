@@ -4,26 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar
+import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
-
-private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
-    when (item.itemId) {
-        R.id.navigation_home -> {
-
-            return@OnNavigationItemSelectedListener true
-        }
-        R.id.navigation_schedule -> {
-
-            return@OnNavigationItemSelectedListener true
-        }
-        R.id.navigation_more -> {
-
-            return@OnNavigationItemSelectedListener true
-        }
-    }
-    false
-}
 
 
 class MainActivity : AppCompatActivity() {
@@ -32,20 +15,46 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.fragment_home)
         navigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
         toolbar = supportActionBar!!
         val bottomNavigation: BottomNavigationView = findViewById(R.id.navigationView)
 
-        about_button.setOnClickListener {
-            val intent = Intent(this, AboutActivity::class.java)
-            startActivity(intent)
-        }
+        bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
-        floatingScoutButton.setOnClickListener {
-            val intent =Intent(this, ScoutActivity::class.java)
-            startActivity(intent)
-        }
     }
+
+
+    private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+        when (item.itemId) {
+            R.id.navigation_home -> {
+                toolbar.title = "Home"
+                val homeFragment = HomeFragment.newInstance()
+                openFragment(homeFragment)
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.navigation_schedule -> {
+                toolbar.title = "Schedule"
+                val scheduleFragment = ScheduleFragment.newInstance()
+                openFragment(scheduleFragment)
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.navigation_more -> {
+                toolbar.title = "More"
+                val moreFragment = MoreFragment.newInstance()
+                openFragment(moreFragment)
+                return@OnNavigationItemSelectedListener true
+            }
+        }
+        false
+    }
+
+    private fun openFragment(fragment: Fragment) {
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.container, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
+
 }
