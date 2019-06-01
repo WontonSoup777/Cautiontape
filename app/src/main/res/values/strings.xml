@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Caution Tape</string>
     <string name="about">About Us</string>
+    <string name="next_schedule">Next Event</string>
+    <string name="vex_rules">VRC Competition Rules</string>
     <string name="nav_home">Home</string>
     <string name="nav_schedule">Schedule</string>
     <string name="nav_more">More</string>

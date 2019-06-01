@@ -18,21 +18,17 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="72dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:elevation="10dp"
+            app:elevation="8dp"
             app:fabSize="auto"
             app:hoveredFocusedTranslationZ="20dp"
             android:visibility="visible"/>
     <ScrollView
-            android:layout_width="411dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
             app:layout_constraintVertical_bias="0.0"
             android:id="@+id/scrollView2">
         <LinearLayout android:layout_width="match_parent"
@@ -41,12 +37,16 @@
                       android:orientation="vertical"
                       app:layout_constraintBottom_toTopOf="parent">
             <androidx.cardview.widget.CardView
-                    android:layout_width="400dp"
+                    android:layout_width="match_parent"
                     android:layout_height="134dp"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginRight="6dp"
                     app:cardCornerRadius="10dp"
                     app:contentPadding="15dp"
-                    app:cardElevation="10dp"
+                    app:cardElevation="4dp"
                     android:visibility="visible">
                 <TextView
                         android:id="@+id/about_card"
@@ -61,50 +61,60 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/about_button"
                         android:layout_gravity="bottom|end"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored" android:typeface="normal"/>
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored" android:typeface="normal"
+                        android:textColor="@color/colorClearButton"/>
             </androidx.cardview.widget.CardView>
-            <androidx.legacy.widget.Space android:layout_width="match_parent" android:layout_height="20dp"/>
             <androidx.cardview.widget.CardView
-                    android:layout_width="400dp"
+                    android:layout_width="match_parent"
                     android:layout_height="134dp"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
                     app:cardCornerRadius="10dp"
                     app:contentPadding="15dp"
-                    app:cardElevation="10dp"
+                    app:cardElevation="4dp"
                     android:visibility="visible">
                 <TextView
                         android:id="@+id/competition_card"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/about"
+                        android:text="@string/next_schedule"
                         android:typeface="normal"
                         android:textSize="18sp"/>
             </androidx.cardview.widget.CardView>
-            <androidx.legacy.widget.Space android:layout_width="match_parent" android:layout_height="20dp"/>
             <androidx.cardview.widget.CardView
-                    android:layout_width="400dp"
+                    android:layout_width="match_parent"
                     android:layout_height="134dp"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
                     app:cardCornerRadius="10dp"
                     app:contentPadding="15dp"
-                    app:cardElevation="10dp"
+                    app:cardElevation="4dp"
                     android:visibility="visible">
                 <TextView
                         android:id="@+id/more_card"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/about"
+                        android:text="@string/vex_rules"
                         android:typeface="normal"
                         android:textSize="18sp"/>
             </androidx.cardview.widget.CardView>
-            <androidx.legacy.widget.Space android:layout_width="match_parent" android:layout_height="20dp"/>
             <androidx.cardview.widget.CardView
-                    android:layout_width="400dp"
+                    android:layout_width="match_parent"
                     android:layout_height="134dp"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
                     app:cardCornerRadius="10dp"
                     app:contentPadding="15dp"
-                    app:cardElevation="10dp"
+                    app:cardElevation="4dp"
                     android:visibility="visible">
                 <TextView
                         android:id="@+id/more_card2"
@@ -114,14 +124,17 @@
                         android:typeface="normal"
                         android:textSize="18sp"/>
             </androidx.cardview.widget.CardView>
-            <androidx.legacy.widget.Space android:layout_width="match_parent" android:layout_height="20dp"/>
             <androidx.cardview.widget.CardView
-                    android:layout_width="400dp"
+                    android:layout_width="match_parent"
                     android:layout_height="134dp"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
                     app:cardCornerRadius="10dp"
                     app:contentPadding="15dp"
-                    app:cardElevation="10dp"
+                    app:cardElevation="4dp"
                     android:visibility="visible">
                 <TextView
                         android:id="@+id/more_card3"
@@ -131,14 +144,17 @@
                         android:typeface="normal"
                         android:textSize="18sp"/>
             </androidx.cardview.widget.CardView>
-            <androidx.legacy.widget.Space android:layout_width="match_parent" android:layout_height="20dp"/>
             <androidx.cardview.widget.CardView
-                    android:layout_width="400dp"
+                    android:layout_width="match_parent"
                     android:layout_height="134dp"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
                     app:cardCornerRadius="10dp"
                     app:contentPadding="15dp"
-                    app:cardElevation="10dp"
+                    app:cardElevation="4dp"
                     android:visibility="visible">
                 <TextView
                         android:id="@+id/more_card4"
@@ -148,7 +164,7 @@
                         android:typeface="normal"
                         android:textSize="18sp"/>
             </androidx.cardview.widget.CardView>
-            <androidx.legacy.widget.Space android:layout_width="match_parent" android:layout_height="60dp"/>
+            <androidx.legacy.widget.Space android:layout_width="match_parent" android:layout_height="70dp"/>
 
         </LinearLayout>
     </ScrollView>
