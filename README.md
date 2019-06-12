@@ -6,6 +6,6 @@ This app is supposed to be used for scouting for the Vex Robotics Competition to
 / Currently in Heavy development /
 
 Version:
-0.055 (Athena)
+0.07 (Athena)
 
 # Enjoy
