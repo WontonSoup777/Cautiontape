@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <EditText
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/eventName" android:layout_marginTop="16dp" android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" android:layout_marginStart="14dp" android:hint="Event Name"
+            android:layout_marginEnd="14dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/dateBox" android:layout_marginTop="14dp" android:layout_below="@+id/eventName"
+            android:layout_alignParentStart="true" android:layout_marginStart="14dp" android:hint="Date" android:layout_marginEnd="14dp"/>
+    <EditText
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:ems="10"
+            android:id="@+id/timeBox" android:layout_marginTop="14dp" android:layout_below="@+id/eventName"
+            android:layout_toEndOf="@+id/dateBox" android:layout_marginStart="14dp" android:hint="Time" android:layout_marginEnd="14dp"/>
+    <EditText
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/tableName" android:layout_marginTop="14dp" android:layout_below="@+id/dateBox"
+            android:layout_alignParentStart="true" android:layout_marginStart="14dp" android:hint="Table"
+            android:layout_marginEnd="14dp"/>
+    <EditText
+            android:layout_width="266dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/locationName" android:layout_toEndOf="@+id/tableName" android:layout_marginStart="14dp"
+            android:layout_marginTop="14dp" android:layout_below="@+id/timeBox" android:hint="Location" android:layout_marginEnd="14dp"/>
+    <Switch
+            android:text="Notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/switch1" android:layout_marginTop="14dp"
+            android:layout_below="@+id/tableName" android:layout_alignParentStart="true"
+            android:layout_marginStart="14dp" android:switchPadding="8dp"/>
+</RelativeLayout>

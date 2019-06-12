@@ -11,6 +11,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
+            android:tooltipText="Scout"
             app:srcCompat="@drawable/ic_action_scout"
             android:focusable="true"
             android:id="@+id/floatingScoutButton"
@@ -30,7 +31,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            android:id="@+id/scrollView2">
+            android:id="@+id/scrollViewHome">
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:layout_gravity="center_horizontal"

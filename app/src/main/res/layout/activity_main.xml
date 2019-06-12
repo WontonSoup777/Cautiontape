@@ -22,13 +22,14 @@
             android:layout_marginEnd="0dp"
             android:layout_marginStart="0dp"
             android:background="?android:attr/windowBackground"
-            android:elevation="30dp"
+            android:elevation="16dp"
+            android:defaultFocusHighlightEnabled="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:itemBackground="@color/colorPrimary"
-            app:itemIconTint="@android:color/black"
-            app:itemTextColor="@android:color/black"
+            app:itemIconTint="@drawable/bottom_navigation_colors"
+            app:itemTextColor="@drawable/bottom_navigation_colors"
             app:menu="@menu/navigation">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
